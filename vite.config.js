@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import laravel from 'laravel-vite-plugin';
+import laravel from 'laravel-vite-plugins';
 
 export default defineConfig({
     plugins: [
