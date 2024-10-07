@@ -5,7 +5,7 @@ return [
         [
             'name' => 'dashboard',
             'title' => 'Dashboard',
-            'icon' => 'bi bi-grid',
+            'icon' => 'fas fa-tachometer-alt',
             'route' => 'admin.index',
             'submenu' => [],
             'number' => 1
@@ -131,5 +131,5 @@ return [
 //            'submenu' => [],
 //            'number' => 2
 //        ],
-]
+    ]
 ];
