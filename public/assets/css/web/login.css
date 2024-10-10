@@ -1,0 +1,246 @@
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .background-primary {
+        background-color: #FBB516;
+        width: 40%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .login-wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        .image-banner {
+            width: 50%;
+            img{
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .right-wrapper {
+            width: 45%;
+            margin: auto 0;
+        }
+
+        .form-wrapper {
+            margin-top: 40px;
+
+            .title {
+                font-size: 40px;
+                font-weight: 900;
+                margin-bottom: 30px;
+                margin-top: 10px;
+            }
+
+            .input-wrapper {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .input-field {
+                border: 1px solid #757575;
+                border-radius: 15px;
+                font-size: 16px;
+                font-weight: 600;
+                color: #000000;
+                padding: 16px 16px;
+                font-style: normal;
+                transition: border-color 0.3s;
+            }
+
+            .input-field::placeholder {
+                font-style: italic;
+                color: #3A1B49;
+            }
+
+            .input-field:focus {
+                border: 2px solid #FBB516;
+                outline: none;
+            }
+
+            .input-field:not(:placeholder-shown) {
+                border: 2px solid #FBB516;
+            }
+
+            .input-field:focus::placeholder {
+                opacity: 0;
+            }
+
+            .input-field-wrapper {
+                position: relative;
+                display: flex;
+                align-items: center;
+            }
+
+            .input-label {
+                position: absolute;
+                top: -25%;
+                left: 5%;
+                padding: 3px;
+                opacity: 0;
+                background: #fff;
+                font-size: 14px;
+                transition: opacity 0.3s ease, transform 0.3s ease;
+                transform: translateY(10px);
+            }
+
+            .input-field:focus + .input-label,
+            .input-field:not(:placeholder-shown) + .input-label {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .input-field-error {
+                border: 2px solid #EC221F !important;
+            }
+
+            .input-label-error {
+                position: absolute;
+                top: -25%;
+                left: 5%;
+                padding: 3px;
+                background: #ffffff;
+                font-size: 14px;
+                opacity: 1;
+                transform: translateY(0);
+                transition: opacity 0.3s ease, transform 0.3s ease;
+            }
+
+            .toggle-password {
+                position: absolute;
+                right: 15px;
+                cursor: pointer;
+            }
+
+            .checkbox-remember {
+                appearance: none;
+                -webkit-appearance: none;
+                width: 20px;
+                height: 20px;
+                border: 2px solid #FBB516;
+                border-radius: 4px;
+                outline: none;
+                cursor: pointer;
+                position: relative;
+                background-color: #fff;
+                transition: background-color 0.2s, border-color 0.2s;
+            }
+
+            .checkbox-remember:checked {
+                background-color: #FBB516;
+                border-color: #FBB516;
+            }
+
+            .checkbox-remember:checked::after {
+                content: '\2713';
+                color: #ffffff;
+                font-size: 16px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .checkbox-remember:hover {
+                transform: scale(1.1);
+            }
+
+            .submit-btn {
+                margin-top: 20px;
+                padding: 10px 20px;
+                border-radius: 15px;
+            }
+
+            .submit-btn-done {
+                background: #FBB516;
+            }
+
+            .submit-btn-not-done {
+                color: #767676;
+                background: #B3B3B3;
+            }
+        }
+    }
+}
+.success-image-wrapper{
+    padding-top: 30px;
+    img{
+        margin: auto;
+    }
+}
+.redirect-success-route{
+    background: #FBB516;
+    padding: 8px 24px;
+    border-radius: 15px;
+    width: fit-content;
+    margin: 10px auto;
+}
+@media screen and (max-width: 1200px) {
+    .login-page {
+        .login-wrapper {
+            .form-wrapper {
+                margin-top: 30px;
+                .title {
+                    font-size: 32px;
+                    margin-bottom: 20px;
+                    margin-top: 10px;
+                }
+                .input-field {
+                    padding: 12px 12px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 992px) {
+    .login-page {
+        .login-wrapper {
+            .form-wrapper {
+                .title {
+                    font-size: 28px;
+                }
+                .input-field {
+                    padding: 10px 10px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .login-page {
+        .background-primary {
+            width: 20%;
+        }
+        .login-wrapper {
+            justify-content: right;
+            .right-wrapper{
+                width: 80%;
+            }
+            .image-banner{
+                display: none;
+            }
+            .form-wrapper {
+                .title {
+                    font-size: 20px;
+                }
+                .input-field {
+                    padding: 8px 8px;
+                    font-size: 14px;
+                }
+                .submit-btn {
+                    padding: 6px 20px;
+                }
+            }
+        }
+    }
+}
