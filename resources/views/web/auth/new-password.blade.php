@@ -18,7 +18,7 @@
                             <span class="text-color-primary text-size-normal mx-1">Quay lại</span>
                         </a>
                         <div class="text-end">
-                            <a href="#" class="text-color-primary text-size-normal text-decoration-underline">Đăng nhập</a>
+                            <a href="{{route('login')}}" class="text-color-primary text-size-normal text-decoration-underline">Đăng nhập</a>
                         </div>
                     </div>
                     <form action="{{route('newPassword.submit')}}" method="POST" class="form-wrapper" id="new-password-form">
@@ -47,6 +47,7 @@
                                 @enderror
                             </div>
                         </div>
+                        @include('web.auth.partials.success-modal')
                         <div class="d-flex justify-content-end mt-3">
                             <button type="submit" class="submit-btn submit-btn-done text-color-secondary text-size-normal">Tiếp theo</button>
                             <button class="submit-btn submit-btn-not-done text-size-normal" disabled>Tiếp theo</button>
@@ -57,6 +58,9 @@
         </div>
     </div>
 @endsection
-<script>
-    var showPasswordImg = "{{asset('assets/images/web/hide-password.png')}}"
-</script>
+@push('scripts')
+    <script src="{{ asset('assets/js/web/new-password.js') }}"></script>
+    <script>
+        var showPasswordImg = "{{asset('assets/images/web/hide-password.png')}}"
+    </script>
+@endpush

@@ -83,44 +83,10 @@
         </div>
     </div>
 @endsection
+
+@push('scripts')
+    <script src="{{ asset('assets/js/web/register.js') }}"></script>
 <script>
     var showPasswordImg = "{{asset('assets/images/web/hide-password.png')}}";
-
-    document.addEventListener('DOMContentLoaded', function () {
-        //Submit register
-        const registerForm = document.querySelector('#register-form');
-        registerForm.addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            fetch(registerForm.action, {
-                method: 'POST',
-                body: new FormData(registerForm),
-                headers: {
-                    'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value,
-                },
-            })
-                .then(response => {
-                    if (!response.ok) {
-                        return response.json().then(errorData => {
-                            throw new Error(errorData.message || 'Đã xảy ra lỗi.');
-                        });
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    if (data.status === 'success') {
-                        const modalMessage = document.getElementById('successModalMessage');
-                        modalMessage.textContent = data.message;
-
-                        const successModal = new bootstrap.Modal(document.getElementById('successModal'));
-                        successModal.show();
-                    } else {
-                        console.error(data.message);
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error.message);
-                });
-        });
-    });
 </script>
+@endpush

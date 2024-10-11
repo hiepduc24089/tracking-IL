@@ -18,7 +18,7 @@
                             <span class="text-color-primary text-size-normal mx-1">Quay lại</span>
                         </a>
                         <div class="text-end">
-                            <a href="#" class="text-color-primary text-size-normal text-decoration-underline">Đăng nhập</a>
+                            <a href="{{route('login')}}" class="text-color-primary text-size-normal text-decoration-underline">Đăng nhập</a>
                         </div>
                     </div>
                     <form action="{{route('authenticationCode.submit')}}" method="POST" class="form-wrapper" id="authentication-code-form">
@@ -28,12 +28,17 @@
                         <div class="input-wrapper">
                             <div class="input-field-wrapper">
                                 <label for="authentication_code" class="input-label text-size-bold-normal text-color-primary">Mã xác nhận</label>
-                                <input type="text" name="authentication_code" placeholder="Mã xác nhận" class="input-field w-100" />
+                                <input type="text" name="authentication_code" placeholder="Mã xác nhận"
+                                       class="input-field w-100 {{ $errors->has('authentication_code') ? 'input-field-error' : '' }}"
+                                       value="{{ old('authentication_code') }}" />
+                                @error('authentication_code')
+                                    <label for="authentication_code" class="input-label-error text-size-bold-normal text-color-error">{{ $message }}</label>
+                                @enderror
                             </div>
                         </div>
                         <div class="text-end mt-3">
                             <p class="text-color-secondary text-size-normal">Chưa nhận được?</p>
-                            <a href="#" class="text-color-primary text-size-normal text-decoration-underline">Gửi lại mã</a>
+                            <a href="{{route('forgetPassword')}}" class="text-color-primary text-size-normal text-decoration-underline">Gửi lại mã</a>
                         </div>
                         <div class="d-flex justify-content-end">
                             <button type="submit" class="submit-btn submit-btn-done text-color-secondary text-size-normal">Tiếp theo</button>

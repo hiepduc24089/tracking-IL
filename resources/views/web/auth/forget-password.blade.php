@@ -18,7 +18,7 @@
                             <span class="text-color-primary text-size-normal mx-1">Quay lại</span>
                         </a>
                         <div class="text-end">
-                            <a href="#" class="text-color-primary text-size-normal text-decoration-underline">Đăng nhập</a>
+                            <a href="{{route('login')}}" class="text-color-primary text-size-normal text-decoration-underline">Đăng nhập</a>
                         </div>
                     </div>
                     <form action="{{route('forgetPassword.submit')}}" method="POST" class="form-wrapper" id="forget-password-form">
@@ -27,9 +27,15 @@
                         <div class="input-wrapper">
                             <div class="input-field-wrapper">
                                 <label for="email" class="input-label text-size-bold-normal text-color-primary">Email</label>
-                                <input type="text" name="email" placeholder="Email" class="input-field w-100" />
+                                <input type="text" name="email" placeholder="Email"
+                                       class="input-field w-100 {{ $errors->has('email') ? 'input-field-error' : '' }}"
+                                       value="{{ old('email') }}" />
+                                @error('email')
+                                <label for="email" class="input-label-error text-size-bold-normal text-color-error">{{ $message }}</label>
+                                @enderror
                             </div>
                         </div>
+                        @include('component.loading.loading')
                         <div class="d-flex justify-content-end mt-2">
                             <button type="submit" class="submit-btn submit-btn-done text-color-secondary text-size-normal">Tiếp theo</button>
                             <button class="submit-btn submit-btn-not-done text-size-normal" disabled>Tiếp theo</button>
@@ -41,3 +47,6 @@
     </div>
 @endsection
 
+@push('scripts')
+    <script src="{{ asset('assets/js/web/forget-password.js') }}"></script>
+@endpush
