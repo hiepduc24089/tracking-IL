@@ -64,8 +64,16 @@ a {
     color: #EC221F;
 }
 
-.text-color-error{
-    color: #EC221F;
+.text-color-white{
+    color: white;
+}
+
+.text-hover-secondary-color:hover{
+    color: #3A1B49;
+}
+
+.text-hover-third-color:hover{
+    color: #22B78F;
 }
 
 .text-size-normal{

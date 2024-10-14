@@ -15,10 +15,10 @@
                         <a href="javascript:void(0);" class="d-flex align-items-center" onclick="window.history.back();">
                             <img src="{{asset('assets/images/web/arrow-back.png')}}" alt="Arrow Back" width="26px"
                                  height="26px"/>
-                            <span class="text-color-primary text-size-normal mx-1">Quay lại</span>
+                            <span class="text-color-primary text-size-normal mx-1 text-hover-third-color">Quay lại</span>
                         </a>
                         <div class="text-end">
-                            <a href="{{route('login')}}" class="text-color-primary text-size-normal text-decoration-underline">Đăng nhập</a>
+                            <a href="{{route('login')}}" class="text-color-primary text-size-normal text-decoration-underline text-hover-third-color">Đăng nhập</a>
                         </div>
                     </div>
                     <form action="{{route('authenticationCode.submit')}}" method="POST" class="form-wrapper" id="authentication-code-form">

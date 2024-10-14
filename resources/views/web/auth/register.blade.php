@@ -13,11 +13,11 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <a href="javascript:void(0);" class="d-flex align-items-center" onclick="window.history.back();">
                             <img src="{{asset('assets/images/web/arrow-back.png')}}" alt="Arrow Back" width="26px" height="26px"/>
-                            <span class="text-color-primary text-size-normal mx-1">Quay lại</span>
+                            <span class="text-color-primary text-size-normal mx-1 text-hover-third-color">Quay lại</span>
                         </a>
                         <div class="text-end">
                             <p class="text-color-secondary text-size-normal">Đã có tài khoản?</p>
-                            <a href="{{route('login')}}" class="text-color-primary text-size-normal text-decoration-underline">Đăng nhập ngay</a>
+                            <a href="{{route('login')}}" class="text-color-primary text-size-normal text-decoration-underline text-hover-third-color">Đăng nhập ngay</a>
                         </div>
                     </div>
                     <form action="{{route('register.submit')}}" method="POST" class="form-wrapper" id="register-form">

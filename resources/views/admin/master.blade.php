@@ -10,7 +10,6 @@
     <title>Fun Academy</title>
 
     <link rel="icon" type="image/x-icon" href="/assets/images/admin/logo.png">
-    <link rel="icon" href="{{ asset('images/brand/favicon.ico') }}" type="image/x-icon"/>
     <link href="{{ asset('plugins/bootstrap/css/bootstrap.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/css/admin/style.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/css/admin/plugins.css') }}" rel="stylesheet" />

@@ -14,11 +14,11 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <a href="javascript:void(0);" class="d-flex align-items-center" onclick="window.history.back();">
                             <img src="{{asset('assets/images/web/arrow-back.png')}}" alt="Arrow Back" width="26px" height="26px"/>
-                            <span class="text-color-primary text-size-normal mx-1">Quay lại</span>
+                            <span class="text-color-primary text-size-normal mx-1 text-hover-third-color">Quay lại</span>
                         </a>
                         <div class="text-end">
                             <p class="text-color-secondary text-size-normal">Chưa có tài khoản?</p>
-                            <a href="{{route('register')}}" class="text-color-primary text-size-normal text-decoration-underline">Đăng ký ngay</a>
+                            <a href="{{route('register')}}" class="text-color-primary text-size-normal text-decoration-underline text-hover-third-color">Đăng ký ngay</a>
                         </div>
                     </div>
                     <form action="{{route('login.submit')}}" method="POST" class="form-wrapper" id="login-form">
@@ -50,7 +50,7 @@
                                 <input type="checkbox" name="remember" class="checkbox-remember mx-1">
                                 <label class="text-color-primary text-size-normal">Nhớ tài khoản</label>
                             </div>
-                            <a href="{{route('forgetPassword')}}" class="text-color-primary text-size-large text-decoration-underline">Quên mật khẩu?</a>
+                            <a href="{{route('forgetPassword')}}" class="text-color-primary text-size-large text-decoration-underline text-hover-third-color">Quên mật khẩu?</a>
                         </div>
                         <div class="d-flex justify-content-end">
                             <button type="submit" class="submit-btn submit-btn-done text-color-secondary text-size-normal">Đăng nhập</button>
