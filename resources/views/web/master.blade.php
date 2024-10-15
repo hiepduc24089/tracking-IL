@@ -16,6 +16,7 @@
           rel="stylesheet">
     <link href="{{ asset('assets/css/web/all.css') }}" rel="stylesheet"/>
     <link href="{{ asset('assets/css/web/header.css') }}" rel="stylesheet"/>
+    <link href="{{ asset('assets/css/web/footer.css') }}" rel="stylesheet"/>
     @yield('style_page')
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{{asset('assets/js/web/all.js')}}"></script>
@@ -23,13 +24,13 @@
 </head>
 <body class="">
 
-<header>
+<header id="header">
     @include('web.partials.header')
 </header>
 
 @yield('content')
 
-<footer>
+<footer class="footer footer-bg-custom pt-5 pb-4">
     @include('web.partials.footer')
 </footer>
 

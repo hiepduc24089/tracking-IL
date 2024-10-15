@@ -5,8 +5,8 @@
 @stop
 
 @section('content')
-<div>
-
+<div class="home-banner">
+    <img src="{{asset('assets/images/web/test-banner.png')}}" alt="banner" />
 </div>
 @endsection
 
