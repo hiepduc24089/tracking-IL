@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\web\AboutUsController;
+use App\Http\Controllers\web\BlogController;
 use App\Http\Controllers\web\HomeController;
 use App\Http\Controllers\web\LoginController;
 use Illuminate\Support\Facades\Route;
@@ -26,3 +28,6 @@ Route::get('/new-password', [LoginController::class, 'newPassword'])->name('newP
 Route::post('/new-password', [LoginController::class, 'newPasswordSubmit'])->name('newPassword.submit');
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
+Route::get('/goc-cha-me', [BlogController::class, 'index'])->name('blog.index');
+Route::get('/goc-cha-me/{slug}', [BlogController::class, 'detail'])->name('blog.detail');
+Route::get('/ve-chung-toi', [AboutUsController::class, 'index'])->name('about.index');

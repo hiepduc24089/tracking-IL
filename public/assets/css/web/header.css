@@ -65,6 +65,7 @@
             background-color: #f7a600;
             padding-top: 15px;
             padding-bottom: 10px;
+            z-index: 1000;
 
             .header-list-item {
                 display: flex;

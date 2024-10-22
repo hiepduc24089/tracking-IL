@@ -15,12 +15,14 @@ body, html {
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
+    line-height: normal;
 }
 
 /* Reset default margins for common elements */
 p, span, a, div, li {
     margin: 0;
     padding: 0;
+    line-height: normal;
 }
 
 /* Remove list styles */
@@ -76,6 +78,10 @@ a {
     color: #22B78F;
 }
 
+.text-size-s-small{
+    font-size: 14px;
+    font-weight: 600;
+}
 .text-size-small{
     font-size: 16px;
     font-weight: 700;
@@ -86,8 +92,18 @@ a {
     font-weight: 700;
 }
 
+.text-size-normal-light{
+    font-size: 18px;
+    font-weight: 600;
+}
+
 .text-size-large{
     font-size: 20px;
+    font-weight: 700;
+}
+
+.text-size-s-large{
+    font-size: 24px;
     font-weight: 700;
 }
 
@@ -100,29 +116,58 @@ a {
     font-size: 20px;
     font-weight: 800;
 }
+
+@media screen and (max-width: 1200px) {
+    .text-size-s-large{
+        font-size: 22px;
+    }
+}
 @media screen and (max-width: 992px) {
     .text-size-normal{
         font-size: 16px;
     }
-
+    .text-size-normal-light{
+        font-size: 16px;
+    }
     .text-size-large{
         font-size: 18px;
     }
-
+    .text-size-s-large{
+        font-size: 20px;
+    }
     .text-size-bold-normal{
         font-size: 16px;
+    }
+    .text-size-small{
+        font-size: 14px;
+    }
+    .text-size-s-small{
+        font-size: 12px;
     }
 }
 @media screen and (max-width: 768px) {
     .text-size-normal{
         font-size: 14px;
     }
-
+    .text-size-normal-light{
+        font-size: 14px;
+    }
     .text-size-large{
         font-size: 16px;
     }
-
+    .text-size-s-large{
+        font-size: 18px;
+    }
     .text-size-bold-normal{
         font-size: 14px;
+    }
+    .text-size-bold-large{
+        font-size: 16px;
+    }
+    .text-size-small{
+        font-size: 12px;
+    }
+    .text-size-s-small{
+        font-size: 10px;
     }
 }
