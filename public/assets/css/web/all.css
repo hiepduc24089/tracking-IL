@@ -70,6 +70,10 @@ a {
     color: white;
 }
 
+.text-hover-primary-color:hover{
+    color: #FBB516;
+}
+
 .text-hover-secondary-color:hover{
     color: #3A1B49;
 }
@@ -86,7 +90,10 @@ a {
     font-size: 16px;
     font-weight: 700;
 }
-
+.text-size-small-light{
+    font-size: 16px;
+    font-weight: 600;
+}
 .text-size-normal{
     font-size: 18px;
     font-weight: 700;
@@ -117,6 +124,17 @@ a {
     font-weight: 800;
 }
 
+.fw-700{
+    font-weight: 700;
+}
+
+.fw-800{
+    font-weight: 800;
+}
+
+.body-content{
+    margin-top: 86px;
+}
 @media screen and (max-width: 1200px) {
     .text-size-s-large{
         font-size: 22px;
@@ -139,6 +157,9 @@ a {
         font-size: 16px;
     }
     .text-size-small{
+        font-size: 14px;
+    }
+    .text-size-small-light{
         font-size: 14px;
     }
     .text-size-s-small{
@@ -167,7 +188,19 @@ a {
     .text-size-small{
         font-size: 12px;
     }
+    .text-size-small-light{
+        font-size: 12px;
+    }
     .text-size-s-small{
         font-size: 10px;
+    }
+    .body-content{
+        margin-top: 76px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .body-content{
+        margin-top: 60px;
     }
 }

@@ -2,8 +2,11 @@
 
 use App\Http\Controllers\web\AboutUsController;
 use App\Http\Controllers\web\BlogController;
+use App\Http\Controllers\web\CartController;
+use App\Http\Controllers\web\ContactController;
 use App\Http\Controllers\web\HomeController;
 use App\Http\Controllers\web\LoginController;
+use App\Http\Controllers\web\PaymentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,3 +34,6 @@ Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/goc-cha-me', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/goc-cha-me/{slug}', [BlogController::class, 'detail'])->name('blog.detail');
 Route::get('/ve-chung-toi', [AboutUsController::class, 'index'])->name('about.index');
+Route::get('/lien-he', [ContactController::class, 'index'])->name('contact.index');
+Route::get('/gio-hang', [CartController::class, 'index'])->name('cart.index');
+Route::get('/thanh-toan', [PaymentController::class, 'index'])->name('payment.index');

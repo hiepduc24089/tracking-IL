@@ -1,0 +1,375 @@
+.about-banner-wrapper{
+    position: relative;
+}
+.banner-cloud{
+    position: absolute;
+    bottom: -420px;
+}
+.banner-text-wrapper{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 100%;
+}
+.banner-text{
+    width: 50%;
+}
+.about-banner-logo{
+    margin: auto;
+}
+
+.about-why-choose{
+    position: relative;
+    z-index: 1;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    .about-why-choose-title{
+        text-align: center;
+        color: white;
+        font-weight: 900;
+        font-size: 45px;
+        text-transform: uppercase;
+        text-shadow: 2px 3px 0px #FBB516;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: #FBB516;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+    .target-item {
+        position: relative;
+        padding-top: 150px;
+        overflow: visible;
+    }
+
+    .target-image {
+        width: 50%;
+        margin: auto;
+        position: absolute;
+        transform: translateX(-50%);
+        left: 50%;
+        top: 0;
+        z-index: 1;
+    }
+
+    .box-information {
+        position: relative;
+        padding: 60px 20px;
+        border-radius: 20px;
+        background: #22B78F;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .target-detail {
+        list-style: disc;
+        padding: revert;
+    }
+
+    .swiper-pagination {
+        position: relative;
+        margin-top: 15px;
+
+        .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #FBB516;
+        }
+    }
+}
+
+.philosophy-wrapper{
+    background: #FFE181;
+    .philosophy-image{
+        border-radius: 50%;
+        padding: 40px 20px;
+    }
+    .philosophy-title{
+        color: white;
+        font-weight: 900;
+        font-size: 45px;
+        text-transform: uppercase;
+        text-shadow: 2px 3px 0px #FBB516;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: #FBB516;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+}
+
+.mission-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0;
+    .mission-title{
+        text-align: center;
+        color: white;
+        font-weight: 900;
+        font-size: 45px;
+        text-transform: uppercase;
+        text-shadow: 2px 3px 0px #FBB516;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: #FBB516;
+    }
+    .mission-detail{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+        margin-top: 30px;
+    }
+    .mission-box{
+        padding: 20px 30px 30px 30px;
+        border-top-left-radius: 45%;
+        border-top-right-radius: 45%;
+        background: #FBB516;
+        text-align: center;
+    }
+    .mission-image{
+        border-radius: 50%;
+        margin-bottom: 30px;
+        object-fit: cover;
+    }
+}
+@media screen and (max-width: 1600px){
+    .banner-cloud{
+        bottom: -380px;
+    }
+}
+@media screen and (max-width: 1460px){
+    .banner-cloud{
+        bottom: -350px;
+    }
+}
+@media screen and (max-width: 1350px){
+    .banner-cloud{
+        bottom: -320px;
+    }
+    .about-why-choose{
+        .target-item {
+            padding-top: 130px;
+        }
+    }
+    .philosophy-wrapper {
+        .philosophy-title {
+            font-size: 40px;
+        }
+    }
+}
+@media screen and (max-width: 1250px){
+    .banner-cloud{
+        bottom: -300px;
+    }
+    .about-why-choose{
+        .about-why-choose-title {
+            font-size: 35px;
+        }
+        .target-item {
+            padding-top: 110px;
+        }
+    }
+    .philosophy-wrapper {
+        .philosophy-title {
+            font-size: 35px;
+        }
+    }
+}
+@media screen and (max-width: 1200px){
+    .mission-wrapper {
+        .mission-detail {
+            gap: 40px;
+        }
+        .mission-box {
+            padding: 10px 30px 30px 30px;
+            border-top-left-radius: 48%;
+            border-top-right-radius: 48%;
+        }
+    }
+}
+@media screen and (max-width: 1150px){
+    .banner-cloud{
+        bottom: -275px;
+    }
+    .about-why-choose{
+        .target-item {
+            padding-top: 100px;
+        }
+    }
+}
+@media screen and (max-width: 1024px){
+    .banner-cloud{
+        bottom: -250px;
+    }
+}
+@media screen and (max-width: 992px){
+    .banner-cloud{
+        display: none;
+    }
+    .about-why-choose{
+        .about-why-choose-title {
+            font-size: 25px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        .target-item {
+            padding-top: 120px;
+        }
+
+        .box-information {
+            padding: 60px 20px 30px;
+        }
+    }
+    .philosophy-wrapper {
+        .philosophy-title {
+            font-size: 25px;
+        }
+    }
+    .mission-wrapper {
+        .mission-detail{
+            gap: 20px;
+        }
+        .mission-box {
+            padding: 5px 20px 20px 20px;
+            border-top-left-radius: 47%;
+            border-top-right-radius: 47%;
+        }
+        .mission-image{
+            margin-bottom: 20px;
+        }
+    }
+}
+@media screen and (max-width: 768px){
+    .about-why-choose{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        .about-why-choose-title {
+            font-size: 25px;
+        }
+        .target-detail{
+            padding-left: 15px;
+        }
+        .target-item {
+            padding-top: 70px;
+        }
+    }
+    .philosophy-wrapper {
+        .philosophy-image{
+            width: 75%;
+            margin: auto;
+            height: auto;
+            padding: 20px 20px;
+        }
+        .philosophy-content{
+            padding-bottom: 20px;
+        }
+        .philosophy-title {
+            font-size: 20px;
+        }
+    }
+    .mission-wrapper{
+        .mission-detail{
+            grid-template-columns: repeat(1, 1fr);
+            margin-top: 20px;
+        }
+        .mission-box{
+            padding: 0;
+            display: flex;
+            border-radius: unset;
+            position: relative;
+            background: none;
+        }
+        .mission-img-wrapper{
+            width: 30%;
+            background: #FBB516;
+            z-index: 10;
+            border-top-left-radius: 50%;
+            border-bottom-left-radius: 50%;
+        }
+        .mission-image{
+            margin-bottom: 0;
+        }
+        .mission-content{
+            width: 70%;
+            background: #FBB516;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 65px;
+            padding-right: 10px;
+            text-align: left;
+            gap: 5px;
+            p{
+                font-size: 14px;
+            }
+            h5{
+                font-size: 16px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 500px) {
+    .about-why-choose {
+        .target-image {
+            width: 35%;
+        }
+        .target-detail{
+            padding: revert;
+        }
+        .target-item {
+            padding-top: 100px;
+        }
+    }
+    .philosophy-wrapper {
+        .philosophy-image{
+            width: 100%;
+            padding: 20px 0;
+        }
+    }
+    .mission-wrapper{
+        .mission-detail{
+            gap: 10px;
+        }
+        .mission-img-wrapper{
+            width: 30%;
+        }
+        .mission-image{
+            margin-bottom: 0;
+        }
+        .mission-content{
+            padding-left: 35px;
+            gap: 3px;
+            p{
+                font-size: 12px;
+            }
+            h5{
+                font-size: 14px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 450px) {
+    .about-why-choose {
+        .target-item {
+            padding-top: 90px;
+        }
+    }
+}
+@media screen and (max-width: 380px) {
+    .mission-wrapper{
+        .mission-content{
+            padding-left: 15px;
+        }
+    }
+}
+@media screen and (max-width: 370px) {
+    .about-why-choose {
+        .target-image {
+            width: 45%;
+        }
+    }
+}

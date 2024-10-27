@@ -21,3 +21,7 @@
 @push('scripts')
     <script src="{{ asset('assets/js/web/blog-page.js') }}"></script>
 @endpush
+
+@section('footer')
+    @include('web.partials.footer')
+@endsection

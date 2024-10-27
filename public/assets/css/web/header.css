@@ -1,4 +1,9 @@
 #header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
     .nav-bar-wrapper {
         background-color: #f7a600;
     }
@@ -76,7 +81,17 @@
         }
     }
 }
-
+@media screen and (max-width: 768px) {
+    #header {
+        .logo {
+            height: 50px;
+        }
+        .list-menu-mobile {
+            padding-top: 10px;
+            padding-bottom: 5px;
+        }
+    }
+}
 @media screen and (max-width: 500px) {
     #header {
         .navbar {

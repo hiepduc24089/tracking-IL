@@ -28,11 +28,11 @@
     @include('web.partials.header')
 </header>
 
-@yield('content')
+<div class="body-content">
+    @yield('content')
+</div>
 
-<footer class="footer footer-bg-custom pt-5 pb-4">
-    @include('web.partials.footer')
-</footer>
+@yield('footer')
 
 @stack('scripts')
 </body>

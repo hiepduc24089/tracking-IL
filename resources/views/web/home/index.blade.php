@@ -32,3 +32,7 @@
 @push('scripts')
     <script src="{{ asset('assets/js/web/home.js') }}"></script>
 @endpush
+
+@section('footer')
+    @include('web.partials.footer')
+@endsection
