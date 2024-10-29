@@ -31,7 +31,7 @@
                              data-original="{{ asset('assets/images/web/shopping-cart.png') }}"
                              alt="Shopping Cart" class="header-icon-item">
                     </a>
-                    <a href="#" class="header-icon-link">
+                    <a href="{{route('profile.index')}}" class="header-icon-link">
                         <img src="{{ asset('assets/images/web/user-icon.png') }}"
                              data-hover="{{ asset('assets/images/web/user-icon-hover.png') }}"
                              data-original="{{ asset('assets/images/web/user-icon.png') }}"

@@ -1,0 +1,518 @@
+.profile-wrapper {
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.profile-tab-wrapper {
+    max-width: 1024px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+}
+
+.input-wrapper {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-field, .select-field {
+    border: 1px solid #757575;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #3A1B49;
+    padding: 8px 16px;
+    font-style: normal;
+    transition: border-color 0.3s;
+}
+
+.input-field::placeholder {
+    font-size: 16px;
+    color: #757575;
+}
+
+.input-field:focus {
+    border: 2px solid #FBB516;
+    outline: none;
+}
+
+.input-field:not(:placeholder-shown) {
+    border: 2px solid #FBB516;
+}
+
+.select-field:focus {
+    border: 2px solid #FBB516;
+    outline: none;
+}
+
+.select-field option:first-child {
+    color: #999;
+}
+
+.input-field:focus::placeholder {
+    opacity: 0;
+}
+
+.input-field-wrapper {
+    position: relative;
+}
+
+.input-field:focus + .input-label,
+.input-field:not(:placeholder-shown) + .input-label {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.input-field-error {
+    border: 2px solid #EC221F !important;
+}
+
+.input-label-error {
+    position: absolute;
+    top: -25%;
+    left: 5%;
+    padding: 3px;
+    background: #ffffff;
+    font-size: 14px;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+.submit-btn-done {
+    display: none;
+    background: #FBB516;
+}
+
+.submit-btn-not-done {
+    color: #767676;
+    background: #B3B3B3;
+}
+
+.profile-popup {
+    /* Initially hide position-close and set up transitions */
+
+    .profile-open, .position-close {
+        transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+
+    .profile-open {
+        transform: translateX(0); /* Default position */
+        opacity: 1; /* Fully visible */
+    }
+
+    .position-close {
+        transform: translateX(-100%); /* Hidden to the left initially */
+        opacity: 0; /* Fully hidden initially */
+    }
+
+    /* Hide profile-open and show position-close when .hidden is added */
+
+    .hidden {
+        transform: translateX(-100%); /* Move the element to the right */
+        opacity: 0; /* Make it fully invisible */
+    }
+
+    .visible {
+        transform: translateX(0); /* Move back to the center */
+        opacity: 1; /* Fully visible */
+    }
+
+    .position-close {
+        position: fixed;
+        top: 150px;
+        z-index: 1;
+    }
+
+    .profile-open {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 20px;
+        height: calc(100vh - 86px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: #22B78F;
+        z-index: 1;
+    }
+
+    .close-wrapper {
+        position: absolute;
+        height: 110px;
+        width: 100px;
+        background: #22B78F;
+    }
+
+    .profile-close {
+        position: absolute;
+        padding: 10px;
+        background: #22B78F;
+        border-radius: 50%;
+        right: -50px;
+    }
+
+    .close-icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .avatar-close {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .avatar-open {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 0 auto;
+        object-fit: cover;
+    }
+
+    .list-tab-title li.active span {
+        color: white;
+    }
+
+    .list-tab-title {
+        margin-top: 70px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        li {
+            padding-bottom: 15px;
+            cursor: pointer;
+        }
+
+        li:not(:last-child) {
+            border-bottom: 1px solid #3A1B49;
+        }
+    }
+
+    .account-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        .account-icon {
+            width: 32px;
+            height: 32px;
+            object-fit: cover;
+        }
+    }
+}
+
+#account-info {
+    .submit-profile {
+        padding: 5px 32px;
+        border-radius: 8px;
+    }
+
+    #btnCancelEdit {
+        display: none;
+        text-decoration: underline;
+    }
+
+    #btnEdit {
+        background: #FBB516;
+        padding: 5px 32px;
+        border-radius: 8px;
+    }
+}
+
+#activity-page{
+    padding-top: 30px;
+}
+#settings-info, #activity-page {
+    .submit-change-pass {
+        padding: 5px 32px;
+        border-radius: 8px;
+    }
+    .form-wrapper{
+        padding-bottom: 50px;
+    }
+    .activity-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .activity-date-wrapper {
+        padding: 10px;
+        border-radius: 5px;
+        background: #f5f5f5;
+    }
+
+    .activity-detail {
+        display: flex;
+        align-items: center;
+        padding: 8px;
+    }
+
+    .activity-detail:not(:last-child) {
+        border-bottom: 1px solid #000000;
+    }
+
+    .activity-image {
+        width: 40px;
+        height: 40px;
+        margin: 0 20px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}
+
+#history-info{
+    padding-top: 30px;
+    .history-title-wrapper{
+        align-items: center;
+    }
+    .sort-status{
+        border: 1px solid #757575;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #3A1B49;
+        padding: 8px 16px;
+        font-style: normal;
+        transition: border-color 0.3s;
+    }
+    .status-dot{
+        height: 8px;
+        width: 8px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 5px;
+    }
+    .cancel-dot {
+        background-color: #EC221F;
+    }
+    .history-cancel{
+        color: #EC221F;
+    }
+    .success-dot{
+        background-color: #14AE5C;
+    }
+    .history-success{
+        color: #14AE5C;
+    }
+    .pending-dot{
+        background-color: #E5A000;
+    }
+    .history-pending{
+        color: #E5A000;
+    }
+    .history-course-img{
+        width: 48px;
+        height: 32px;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+    .table-responsive{
+        overflow-x: auto;
+    }
+    .table-responsive::-webkit-scrollbar {
+        height: 5px;
+    }
+
+    .table-responsive::-webkit-scrollbar-thumb {
+        background-color: #cccccc;
+        border-radius: 10px;
+    }
+
+    .table-responsive::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    .history-table {
+        margin-top: 50px;
+        width: 100%;
+        border: 1px solid #000000;
+        border-radius: 5px;
+        border-collapse: collapse;
+        overflow: hidden;
+        text-wrap: nowrap;
+    }
+    .history-table th, .history-table td {
+        padding: 10px;
+        text-align: center;
+    }
+    .history-table tr:not(:last-child) td {
+        border-bottom: 1px solid #000000;
+    }
+    .history-table thead th {
+        background-color: #3A1B49;
+        color: white;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 1600px) {
+    .profile-tab-wrapper {
+        max-width: 876px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .profile-tab-wrapper {
+        max-width: 768px;
+    }
+
+    .profile-popup {
+        max-width: 225px;
+    }
+}
+
+@media screen and (max-width: 1320px) {
+    .profile-tab-wrapper {
+        max-width: 650px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .profile-tab-wrapper {
+        max-width: 550px;
+    }
+    .profile-column-gap{
+        row-gap: 20px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .profile-popup {
+        .profile-open {
+            transform: translateX(0);
+            opacity: 0;
+            right: 0;
+            left: unset;
+            visibility: hidden;
+        }
+
+        .position-close {
+            position: fixed;
+            top: 100px;
+            right: 70px;
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .close-wrapper {
+            height: 67px;
+            width: 70px;
+        }
+
+        .profile-close {
+            padding: 6px;
+            left: -30px;
+            right: unset;
+        }
+
+        .avatar-close {
+            width: 50px;
+            height: 55px;
+        }
+
+        .hidden {
+            transform: translateX(0);
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .visible {
+            transform: translateX(0);
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .profile-column-gap{
+        row-gap: 15px;
+    }
+    .input-wrapper{
+        gap: 15px;
+    }
+    .profile-tab-wrapper {
+        max-width: 720px;
+    }
+
+    .input-field, .select-field {
+        font-size: 14px;
+    }
+
+    .input-field::placeholder {
+        font-size: 14px;
+    }
+    #history-info{
+        .history-title-wrapper{
+            flex-direction: column;
+            align-items: start;
+            gap: 15px;
+        }
+        .sort-status{
+            padding: 4px 8px;
+            font-size: 14px;
+        }
+        .history-table{
+            margin-top: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .input-wrapper{
+        padding-top: 20px;
+    }
+    .profile-tab-wrapper {
+        max-width: 540px;
+    }
+
+    .input-field, .select-field {
+        font-size: 12px;
+    }
+
+    .input-field::placeholder {
+        font-size: 12px;
+    }
+    #activity-page {
+        .activity-image {
+            margin: 0 10px 0 0;
+        }
+    }
+    #history-info {
+        padding-top: 20px;
+        .sort-status {
+            font-size: 12px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .profile-popup {
+        .position-close {
+            top: 90px;
+        }
+    }
+    .profile-column-gap{
+        row-gap: 10px;
+    }
+    .input-wrapper{
+        gap: 10px;
+    }
+}
